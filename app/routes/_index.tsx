@@ -16,13 +16,10 @@ export default function Index() {
     <div className="flex-1 p-10 grid sm:grid-cols-2 gap-16 sm:place-items-center">
       <div className="space-y-8">
         <div>
-          <h2 className="text-4xl font-bold">Remix 🤝 MDX</h2>
+          <h2 className="text-4xl font-bold">Atsushi Hatakeyama</h2>
           <p className="text-gray-600 font-light">
-            Powered by Vite plugins. Check out the{" "}
-            <a href="https://github.com/pcattori/remix-blog-mdx">
-              code on Github
-            </a>
-            .
+            Software engineer at{" "}
+            <a href="https://www.tcs.com/jp-ja">Tata consultancy services</a>.
           </p>
         </div>
         <hr />
