@@ -54,10 +54,10 @@ const Layout = (props: { children: ReactNode }) => (
 );
 
 export const meta: MetaFunction = () => [
-  { title: "Remix 🤝 MDX" },
+  { title: "Atsushi Hatakeyama" },
   {
     name: "description",
-    content: "Template showing off Remix's new MDX capabilities",
+    content: "Site showing off blog and work by Atsushi Hatakeyama",
   },
 ];
 
