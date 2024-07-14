@@ -11,22 +11,22 @@ export const Layout = (props: { children: ReactNode }) => (
         <ul className="flex gap-16 text-lg font-semibold">
           <li>
             <NavLink to="/" className={navLinkClass}>
-              home
+              Home
             </NavLink>
           </li>
           <li>
             <NavLink to="/blog" className={navLinkClass}>
-              blog
+              Blog
             </NavLink>
           </li>
           <li>
             <NavLink to="/about" className={navLinkClass}>
-              about
+              About
             </NavLink>
           </li>
           <li>
             <NavLink to="/work" className={navLinkClass}>
-              work
+              Work
             </NavLink>
           </li>
         </ul>
