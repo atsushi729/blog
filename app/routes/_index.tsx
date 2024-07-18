@@ -16,11 +16,8 @@ export default function Index() {
     <div className="flex-1 p-10 grid sm:grid-cols-2 gap-16 sm:place-items-center">
       <div className="space-y-8">
         <div>
-          <h2 className="text-4xl font-bold">Atsushi Hatakeyama</h2>
-          <p className="text-gray-600 font-light">
-            Software engineer at{" "}
-            <a href="https://www.tcs.com/jp-ja">Tata consultancy services</a>.
-          </p>
+          <h2 className="text-4xl font-bold">Welcome to my blog 😃</h2>
+          <p className="text-gray-600 font-light">I'm a Software engineer</p>
         </div>
         <hr />
         <section>
