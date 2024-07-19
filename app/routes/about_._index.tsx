@@ -12,22 +12,22 @@ export default function Component() {
       <h3 className="text-3xl font-bold pt-10">Links</h3>
       <ul className="pl-5 pt-5 space-y-3 text-gray-600 list-disc marker:text-cyan">
         <li>
-          <a href="https://github.com">Github</a>
+          <a href="https://github.com/atsushi729">Github</a>
         </li>
         <li>
-          <a href="https://linkedin.com">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/atsushi-hatakeyama/">LinkedIn</a>
         </li>
         <li>
-          <a href="https://twitter.com">Twitter</a>
+          <a href="https://x.com/Hatakey2Atsushi">Twitter</a>
         </li>
         <li>
-          <a href="https://medium.com">Medium</a>
+          <a href="https://medium.com/@dtianshan7">Medium</a>
         </li>
         <li>
-          <a href="https://zenn.dev">Zenn</a>
+          <a href="https://zenn.dev/atusi">Zenn</a>
         </li>
         <li>
-          <a href="https://note.com">note</a>
+          <a href="https://note.com/beyond_mars">note</a>
         </li>
       </ul>
     </div>
