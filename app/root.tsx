@@ -6,6 +6,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigate,
 } from "@remix-run/react";
 import { Layout } from "./components/Layout";
 import CommandBar from "./components/commandBar";
@@ -20,14 +21,17 @@ export const meta: MetaFunction = () => [
 ];
 
 export default function App() {
+  const navigate = useNavigate();
+
   const actions = [
+    // Navigation
     {
       id: "home",
       name: "Home",
       section: "navigation",
       shortcut: ["h"],
       keywords: "home",
-      perform: () => {},
+      perform: () => navigate("/"),
     },
     {
       id: "about",
@@ -35,8 +39,9 @@ export default function App() {
       section: "navigation",
       shortcut: ["a"],
       keywords: "about, contact",
-      perform: () => {},
+      perform: () => navigate("/about"),
     },
+    // Utilities
     {
       id: "dark-theme",
       name: "Dark theme",
