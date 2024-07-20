@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Layout } from "./components/Layout";
+import CommandBar from "./components/commandBar";
 import "~/tailwind.css";
 
 export const meta: MetaFunction = () => [
@@ -19,6 +20,41 @@ export const meta: MetaFunction = () => [
 ];
 
 export default function App() {
+  const actions = [
+    {
+      id: "home",
+      name: "Home",
+      section: "navigation",
+      shortcut: ["h"],
+      keywords: "home",
+      perform: () => {},
+    },
+    {
+      id: "about",
+      name: "About",
+      section: "navigation",
+      shortcut: ["a"],
+      keywords: "about, contact",
+      perform: () => {},
+    },
+    {
+      id: "dark-theme",
+      name: "Dark theme",
+      section: "utilities",
+      shortcut: ["d"],
+      keywords: "dark, theme, mode",
+      perform: () => {},
+    },
+    {
+      id: "light-theme",
+      name: "Light theme",
+      section: "utilities",
+      shortcut: ["l"],
+      keywords: "light, theme, mode",
+      perform: () => {},
+    },
+  ];
+
   return (
     <html lang="en">
       <head>
@@ -28,9 +64,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Layout>
-          <Outlet />
-        </Layout>
+        <CommandBar actions={actions}>
+          <Layout>
+            <Outlet />
+          </Layout>
+        </CommandBar>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
