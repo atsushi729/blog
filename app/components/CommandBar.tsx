@@ -42,14 +42,14 @@ const SearchResult = () => {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <div className="text-xm uppercase px-4 pt-3 text-neutral-500 font-bold">
+          <div className="text-xm uppercase px-4 pt-3 text-cyan-700 font-bold">
             {item}
           </div>
         ) : (
           <div
-            style={{
-              background: active ? "#eee" : "transparent",
-            }}
+            className={`text-black flex px-4 py-3 ${
+              active ? "bg-[#eeeeee]" : "bg-transparent"
+            }`}
           >
             {item.name}
           </div>
