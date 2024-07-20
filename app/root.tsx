@@ -9,7 +9,7 @@ import {
   useNavigate,
 } from "@remix-run/react";
 import { Layout } from "./components/Layout";
-import CommandBar from "./components/commandBar";
+import CommandBar from "./components/searchBar";
 import "~/tailwind.css";
 
 export const meta: MetaFunction = () => [

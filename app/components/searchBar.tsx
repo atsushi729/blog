@@ -10,14 +10,12 @@ import {
 } from "kbar";
 import { HTMLAttributes, ReactNode } from "react";
 
-interface CommandBarProps extends HTMLAttributes<HTMLElement> {
+interface SearchBarProps extends HTMLAttributes<HTMLElement> {
   actions: Action[];
   children?: ReactNode;
 }
 
-const CommandBar = ({ actions, children }: CommandBarProps) => {
-  console.log(children);
-
+const SearchBar = ({ actions, children }: SearchBarProps) => {
   return (
     <KBarProvider actions={actions}>
       <KBarPortal>
@@ -59,4 +57,4 @@ const SearchResult = () => {
   );
 };
 
-export default CommandBar;
+export default SearchBar;
