@@ -8,9 +8,10 @@ import {
   ScrollRestoration,
   useNavigate,
 } from "@remix-run/react";
+import "~/tailwind.css";
 import { Layout } from "./components/Layout";
 import CommandBar from "./components/searchBar";
-import "~/tailwind.css";
+import { getActions } from "./constants/kbarActions"; 
 
 export const meta: MetaFunction = () => [
   { title: "Atsushi Hatakeyama" },
@@ -21,60 +22,7 @@ export const meta: MetaFunction = () => [
 ];
 
 export default function App() {
-  const navigate = useNavigate();
-
-  const actions = [
-    // Navigation
-    {
-      id: "home",
-      name: "Home",
-      section: "navigation",
-      shortcut: ["h"],
-      keywords: "home",
-      perform: () => navigate("/"),
-    },
-    {
-      id: "blog",
-      name: "Blog",
-      section: "navigation",
-      shortcut: ["b"],
-      keywords: "blog, article",
-      perform: () => navigate("/blog"),
-    },
-    {
-      id: "about",
-      name: "About",
-      section: "navigation",
-      shortcut: ["a"],
-      keywords: "about, contact",
-      perform: () => navigate("/about"),
-    },
-    {
-      id: "work",
-      name: "Work",
-      section: "navigation",
-      shortcut: ["w"],
-      keywords: "work, oss, project",
-      perform: () => navigate("/work"),
-    },
-    // Utilities
-    {
-      id: "dark-theme",
-      name: "Dark theme",
-      section: "utilities",
-      shortcut: ["d"],
-      keywords: "dark, theme, mode",
-      perform: () => {},
-    },
-    {
-      id: "light-theme",
-      name: "Light theme",
-      section: "utilities",
-      shortcut: ["l"],
-      keywords: "light, theme, mode",
-      perform: () => {},
-    },
-  ];
+  const actions = getActions();
 
   return (
     <html lang="en">
