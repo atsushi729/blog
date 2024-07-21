@@ -34,12 +34,28 @@ export default function App() {
       perform: () => navigate("/"),
     },
     {
+      id: "blog",
+      name: "Blog",
+      section: "navigation",
+      shortcut: ["b"],
+      keywords: "blog, article",
+      perform: () => navigate("/blog"),
+    },
+    {
       id: "about",
       name: "About",
       section: "navigation",
       shortcut: ["a"],
       keywords: "about, contact",
       perform: () => navigate("/about"),
+    },
+    {
+      id: "work",
+      name: "Work",
+      section: "navigation",
+      shortcut: ["w"],
+      keywords: "work, oss, project",
+      perform: () => navigate("/work"),
     },
     // Utilities
     {
