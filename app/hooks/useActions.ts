@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 // Function to define actions
-export const getActions = () => {
+export const useActions = () => {
   const navigate = useNavigate();
 
   return [

@@ -6,12 +6,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useNavigate,
 } from "@remix-run/react";
 import "~/tailwind.css";
 import { Layout } from "./components/Layout";
 import CommandBar from "./components/searchBar";
-import { getActions } from "./constants/kbarActions"; 
+import { useActions } from "./hooks/useActions";
 
 export const meta: MetaFunction = () => [
   { title: "Atsushi Hatakeyama" },
@@ -22,7 +21,7 @@ export const meta: MetaFunction = () => [
 ];
 
 export default function App() {
-  const actions = getActions();
+  const actions = useActions();
 
   return (
     <html lang="en">
