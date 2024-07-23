@@ -9,7 +9,7 @@ import {
 } from "@remix-run/react";
 import "~/tailwind.css";
 import { Layout } from "./components/Layout";
-import CommandBar from "./components/searchBar";
+import CommandBar from "./components/SearchBar";
 import { useActions } from "./hooks/useActions";
 
 export const meta: MetaFunction = () => [
