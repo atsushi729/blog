@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -6,6 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteError,
 } from "@remix-run/react";
 import "~/tailwind.css";
 import { Layout } from "./components/Layout";
@@ -40,6 +42,31 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  return (
+    <html>
+      <head>
+        <title>Oops!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body className="bg-brown-900 flex items-center justify-center min-h-screen relative">
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src="/public/404-background.png"
+            alt="404"
+            className="max-w-full h-auto mb-8"
+          />
+          <Link to="/">Home</Link>
+        </div>
+        <Scripts />
       </body>
     </html>
   );
