@@ -8,7 +8,9 @@ export const Post = ({ slug, frontmatter }: PostMeta) => {
       <Link to={`/blog/${slug}`}>
         <h3 className="text-3xl font-bold">{frontmatter.title}</h3>
       </Link>
-      <p className="text-gray-600">{frontmatter.description}</p>
+      <p className="text-gray-600 dark:text-dark-sub">
+        {frontmatter.description}
+      </p>
       <time
         className="block text-sm text-cyan-700"
         dateTime={frontmatter.published}

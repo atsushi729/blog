@@ -15,7 +15,7 @@ export const Layout = (props: { children: ReactNode }) => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col dark:bg-custom-gradient dark:text-white">
+    <div className="min-h-screen flex flex-col dark:bg-custom-gradient dark:text-dark-main">
       <header className="w-full max-w-7xl mx-auto p-10 border-b border-gray-100">
         <nav>
           <ul className="flex gap-16 text-lg font-semibold">
