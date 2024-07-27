@@ -17,7 +17,7 @@ export default function Index() {
       <div className="space-y-8">
         <div>
           <h2 className="text-4xl font-bold">Welcome to my blog 😃</h2>
-          <p className="text-gray-600 font-light dark:text-slate-400">
+          <p className="text-gray-600 font-light dark:text-dark-sub">
             I'm a Software engineer
           </p>
         </div>
