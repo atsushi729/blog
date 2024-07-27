@@ -13,6 +13,7 @@ import "~/tailwind.css";
 import { Layout } from "./components/Layout";
 import CommandBar from "./components/SearchBar";
 import { useActions } from "./hooks/useActions";
+import { ThemeProvider, useTheme } from "~/utils/theme-provider";
 
 export const meta: MetaFunction = () => [
   { title: "Atsushi Hatakeyama" },
@@ -22,11 +23,12 @@ export const meta: MetaFunction = () => [
   },
 ];
 
-export default function App() {
+export function App() {
+  const [theme] = useTheme();
   const actions = useActions();
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${theme}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,6 +46,14 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
+  );
+}
+
+export default function AppWithProviders() {
+  return (
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   );
 }
 

@@ -1,12 +1,21 @@
 import { NavLink } from "@remix-run/react";
 import { ReactNode } from "react";
+import { Theme, useTheme } from "~/utils/theme-provider";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? "border-b-2 border-cyan-700" : "";
 
 export const Layout = (props: { children: ReactNode }) => {
+  const [theme, setTheme] = useTheme();
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) =>
+      prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+    );
+  };
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col dark:bg-custom-gradient dark:text-white">
       <header className="w-full max-w-7xl mx-auto p-10 border-b border-gray-100">
         <nav>
           <ul className="flex gap-16 text-lg font-semibold">
@@ -32,6 +41,7 @@ export const Layout = (props: { children: ReactNode }) => {
             </li>
           </ul>
         </nav>
+        <button onClick={toggleTheme}>Toggle</button>
       </header>
       <main className="w-full max-w-7xl mx-auto flex-1 flex">
         {props.children}

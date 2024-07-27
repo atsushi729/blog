@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { Theme, useTheme } from "~/utils/theme-provider";
 
 // Function to define actions
 export const useActions = () => {
   const navigate = useNavigate();
+  const [theme, setTheme] = useTheme();
 
   return [
     // Navigation
@@ -45,7 +47,7 @@ export const useActions = () => {
       section: "utilities",
       shortcut: ["d"],
       keywords: "dark, theme, mode",
-      perform: () => {},
+      perform: () => setTheme(Theme.DARK),
     },
     {
       id: "light-theme",
@@ -53,7 +55,7 @@ export const useActions = () => {
       section: "utilities",
       shortcut: ["l"],
       keywords: "light, theme, mode",
-      perform: () => {},
+      perform: () => setTheme(Theme.LIGHT),
     },
   ];
 };
