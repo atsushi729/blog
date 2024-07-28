@@ -1,6 +1,11 @@
 import { NavLink } from "@remix-run/react";
 import { ReactNode } from "react";
 import { Theme, useTheme } from "~/utils/theme-provider";
+import {
+  ComputerDesktopIcon,
+  MoonIcon,
+  SunIcon,
+} from "@heroicons/react/24/outline";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? "border-b-2 border-cyan-700" : "";
@@ -39,9 +44,20 @@ export const Layout = (props: { children: ReactNode }) => {
                 Work
               </NavLink>
             </li>
+            <li className="ml-auto">
+              <button
+                onClick={toggleTheme}
+                className="px-4 py-2 text-white rounded"
+              >
+                {theme === "light" ? (
+                  <SunIcon className="size-6 text-black" />
+                ) : (
+                  <MoonIcon className="size-6" />
+                )}
+              </button>
+            </li>
           </ul>
         </nav>
-        <button onClick={toggleTheme}>Toggle</button>
       </header>
       <main className="w-full max-w-7xl mx-auto flex-1 flex">
         {props.children}
