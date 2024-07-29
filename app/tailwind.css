@@ -9,3 +9,7 @@ body {
 a:not(nav a) {
   @apply underline decoration-cyan-700 hover:decoration-cyan-900;
 }
+
+.dark .prose {
+  @apply text-dark-main; /* ダークモード時のテキストカラー */
+}

@@ -47,12 +47,12 @@ export const Layout = (props: { children: ReactNode }) => {
             <li className="ml-auto">
               <button
                 onClick={toggleTheme}
-                className="px-4 py-2 text-white rounded"
+                className="px-4 py-2 text-white rounded flex items-center gap-2"
               >
-                {theme === "light" ? (
-                  <SunIcon className="size-6 text-black" />
+                {theme === Theme.LIGHT ? (
+                  <SunIcon className="h-6 w-6 text-black" />
                 ) : (
-                  <MoonIcon className="size-6" />
+                  <MoonIcon className="h-6 w-6 text-white" />
                 )}
               </button>
             </li>
