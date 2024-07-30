@@ -11,5 +11,41 @@ a:not(nav a) {
 }
 
 .dark .prose {
-  @apply text-dark-main; /* ダークモード時のテキストカラー */
+  @apply text-dark-main;
+}
+
+.dark
+  .prose
+  :where(h1):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #f1f5f9;
+}
+
+.dark
+  .prose
+  :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #e3e3e3;
+}
+
+.dark
+  .prose
+  :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #7f8da1e9;
+}
+
+.dark
+  .prose
+  :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #818ea1;
+}
+
+.dark
+  .prose
+  :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #0891b2;
+}
+
+.dark
+  .prose
+  :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #0891b2;
 }
