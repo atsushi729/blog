@@ -49,3 +49,9 @@ a:not(nav a) {
   :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: #0891b2;
 }
+
+.dark
+  .prose
+  :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #ebebeb;
+}
