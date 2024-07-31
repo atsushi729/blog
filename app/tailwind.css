@@ -29,13 +29,13 @@ a:not(nav a) {
 .dark
   .prose
   :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  color: #7f8da1e9;
+  color: #e3e3e3;
 }
 
 .dark
   .prose
   :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  color: #818ea1;
+  color: #e3e3e3;
 }
 
 .dark
