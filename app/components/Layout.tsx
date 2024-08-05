@@ -6,6 +6,7 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
+import Footer from "./Footer";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? "border-b-2 border-cyan-700" : "";
@@ -62,13 +63,7 @@ export const Layout = (props: { children: ReactNode }) => {
       <main className="w-full max-w-7xl mx-auto flex-1 flex">
         {props.children}
       </main>
-      <footer className="w-full max-w-7xl mx-auto p-10 flex justify-center">
-        <div className="w-full flex justify-center">
-          <div className="mt-auto text-gray-800 dark:text-dark-sub">
-            © {new Date().getFullYear()} Atsushi Hatakeyama
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
