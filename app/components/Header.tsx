@@ -39,6 +39,14 @@ const Header = () => {
               Work
             </NavLink>
           </li>
+          <li>
+            <KBarButton>
+              <div className="hidden items-center rounded-md border-[1px] border-gray-300 dark:border-black dark:bg-black px-2 py-1 font-medium text-gray-900 sm:flex dark:text-dark-main hover:border-cyan-700 transition-colors duration-300">
+                <div className="px-2 dark:text-dark-sub ">Search ...</div>
+                <div className="dark:text-dark-sub">⌘K</div>
+              </div>
+            </KBarButton>
+          </li>
           <li className="ml-auto">
             <button
               onClick={toggleTheme}
