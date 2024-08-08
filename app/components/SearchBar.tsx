@@ -20,7 +20,7 @@ const SearchBar = ({ actions, children }: SearchBarProps) => {
     <KBarProvider actions={actions}>
       <KBarPortal>
         <KBarPositioner className="bg-black/20 backdrop-blur-sm">
-          <KBarAnimator className="bg-white rounded-xl flex flex-col gap-4 w-[35rem] overflow-hidden">
+          <KBarAnimator className="bg-white rounded-xl flex flex-col gap-4 w-[35rem] overflow-hidden dark:bg-black">
             <KBarSearch className="w-full outline-none px-6 py-4 text-black" />
             {/* Search result */}
             <SearchResult />
@@ -45,8 +45,10 @@ const SearchResult = () => {
           </div>
         ) : (
           <div
-            className={`text-black flex px-4 py-3 ${
-              active ? "bg-[#eeeeee]" : "bg-transparent"
+            className={`text-black flex px-4 py-3 dark:text-dark-main ${
+              active
+                ? "bg-[#eeeeee] dark:text-cyan-700 dark:bg-gray-900"
+                : "bg-transparent"
             }`}
           >
             {item.name}
