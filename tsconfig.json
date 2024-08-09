@@ -5,14 +5,14 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "module": "ESNext", // Define which environment will be used when code is working
+    "moduleResolution": "Bundler", // Supporting module resulution (replace to "Bundler" if "node" is setting) 
     "resolveJsonModule": true,
-    "target": "ES2022",
+    "target": "ES2022", // Define version to transpile
     "strict": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    // "baseUrl": ".", // Not nessesary
     "paths": {
       "~/*": ["./app/*"]
     },
