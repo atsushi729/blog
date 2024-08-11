@@ -1,4 +1,4 @@
-/// <reference types="@remix-run/node" />
+import '@remix-run/node';
 /// <reference types="vite/client" />
 
 declare module "virtual:remix/server-build" {
