@@ -7,7 +7,6 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useRouteError,
 } from "@remix-run/react";
 import "~/tailwind.css";
 import { Layout } from "./components/Layout";
@@ -58,10 +57,8 @@ export default function AppWithProviders() {
 }
 
 export function ErrorBoundary() {
-  const error = useRouteError();
-
   return (
-    <html>
+    <html lang="en">
       <head>
         <title>Oops!</title>
         <Meta />

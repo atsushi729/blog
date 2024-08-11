@@ -18,7 +18,7 @@ export default function Index() {
         <div>
           <h2 className="text-4xl font-bold">Welcome to my blog 😃</h2>
           <p className="text-gray-600 font-light dark:text-dark-sub">
-            I'm a Software engineer
+            I&apos;m a Software engineer
           </p>
         </div>
         <hr />

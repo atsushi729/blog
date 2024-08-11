@@ -7,7 +7,7 @@ export default function Component() {
         Software engineer at{" "}
         <a href="https://www.tcs.com/jp-ja">Tata consultancy services</a>.
       </p>
-      <p className="pt-5">I'm a full time software engineer.</p>
+      <p className="pt-5">I&apos;m a full-time software engineer.</p>
       {/* Social network links */}
       <h3 className="text-3xl font-bold pt-10">Links</h3>
       <ul className="pl-5 pt-5 space-y-3 text-gray-600 list-disc marker:text-cyan dark:text-dark-sub">

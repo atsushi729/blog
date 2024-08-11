@@ -4,7 +4,7 @@ import { Theme, useTheme } from "~/utils/theme-provider";
 // Function to define actions
 export const useActions = () => {
   const navigate = useNavigate();
-  const [theme, setTheme] = useTheme();
+  const [, setTheme] = useTheme();
 
   return [
     // Navigation
