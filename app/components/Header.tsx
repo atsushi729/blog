@@ -2,6 +2,7 @@ import { NavLink } from "@remix-run/react";
 import { Theme, useTheme } from "~/utils/theme-provider";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { KBarButton } from "pliny/search/KBarButton.js";
+import MobileNav from "./MobileNav";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   isActive ? "border-b-2 border-cyan-700" : "";
@@ -17,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="w-full max-w-7xl mx-auto p-10 border-b border-gray-100">
-      <nav>
+      <nav className="hidden sm:block">
         <ul className="flex gap-16 text-lg font-semibold">
           <li>
             <NavLink to="/" className={navLinkClass}>
@@ -61,6 +62,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <MobileNav />
     </header>
   );
 };
