@@ -1,7 +1,6 @@
 import { Link } from "@remix-run/react";
 import { useState } from "react";
-
-const headerNavLinks = [{ href: "/", title: "Home" }];
+import { headerNavLinks } from "~/constants/mobileNavigationLinks";
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false);
